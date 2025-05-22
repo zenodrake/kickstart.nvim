@@ -203,6 +203,8 @@ vim.keymap.set('n', '<leader>i', function()
 end, { desc = 'Show the entire line of a diagnostic error' })
 
 vim.keymap.set('n', '<C-q>', ':tabclose<cr>', { desc = 'Close current tab' })
+--vim.keymap.set('n', '<C-/', 'comment current line') --implement this
+
 -- this doesn't work for me at the moment:  vim.opt.tabstop = 4
 
 -- [[ Basic Autocommands ]]
@@ -805,7 +807,7 @@ require('lazy').setup({
           -- If you prefer more traditional completion keymaps,
           -- you can uncomment the following lines
           --['<CR>'] = cmp.mapping.confirm { select = true },
-          ['<Tab>'] = cmp.mapping.confirm { select = true },
+          --['<Tab>'] = cmp.mapping.confirm { select = true },
           --['<Tab>'] = cmp.mapping.select_next_item(),
           --['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
@@ -946,7 +948,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
